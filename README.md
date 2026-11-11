@@ -1,14 +1,17 @@
 # Packstub art
 
-Published images for Packstub plugins, one folder per plugin: `banner.jpg`,
-`thumbnail.jpg`, `preview.png`, `mock.png`, `og.png` and the docs screenshots
-under `<slug>/docs/`. Link them raw:
+Published images for Packstub plugins, one folder per plugin. Link them raw:
 
 ```
 https://raw.githubusercontent.com/packstub/art/main/<slug>/banner.jpg
+https://raw.githubusercontent.com/packstub/art/main/<slug>/docs/<shot>.png
 ```
 
-Generated from `public/images/plugins/` of the store at commit `3e51862`
-by `php artisan packstub:art:publish`; the history is a single commit that is
-replaced on every publish. Do not edit here — change the art in the store and
-publish again.
+- `<slug>/banner.jpg`, `thumbnail.jpg`, `preview.png`, `mock.png`, `og.png`:
+  rendered in packstub/store (`public/images/plugins/<slug>/`) and published by
+  its `publish-art.yml` workflow.
+- `<slug>/docs/`: the plugin's screenshots, pushed from its own `docs/images/` by
+  its `docs-sync.yml` workflow.
+
+Nothing is deleted on publish, so links from older releases keep working. Do not
+edit here: change the image at its source and push.
