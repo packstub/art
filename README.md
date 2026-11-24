@@ -8,8 +8,8 @@ https://raw.githubusercontent.com/packstub/art/main/<slug>/docs/<shot>.png
 ```
 
 - `<slug>/banner.jpg`, `thumbnail.jpg`, `preview.png`, `mock.png`, `og.png`:
-  rendered in packstub/store (`public/images/plugins/<slug>/`) and published by
-  its `publish-art.yml` workflow.
+  rendered in packstub/store (`public/images/plugins/<slug>/`) and published with
+  `composer publish:main` in the store.
 - `<slug>/docs/`: the plugin's screenshots, pushed from its own `docs/images/` by
   its `docs-sync.yml` workflow.
 
